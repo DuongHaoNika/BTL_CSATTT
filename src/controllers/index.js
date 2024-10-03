@@ -7,10 +7,10 @@ const login = async (req, res) => {
     if(result == 1) {
         const user = new User(req.body);
         await user.save();
-        res.send("OK roi ne")
+        return res.render('index')
     }
     else {
-        res.send("SAI tk, mk")
+        return res.render('qldt', {err: "err"})
     }
 }
 

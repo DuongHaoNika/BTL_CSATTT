@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "icon" type = "image/x-icon" href="favicon_io/android-chrome-512x512.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <title>Cổng thông tin quản lý đào tạo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #e5e5e5;
+    }
+    .div1{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll; 
+        overflow-x: hidden;
+        margin: 0%; 
+        position: absolute;
+        left: 0px; 
+        right: 0px; 
+        top: 0px;
+    }
+    .scroll{
+        scrollbar-track-color: black;
+        scrollbar-base-color: gray;
+    }
+    .div2{
+        width: 100vw; 
+        height:7%; 
+        background-color: #ad171c;
+        padding: 0;
+        display: flex;
+    }
+    .div3{
+        display: flex; 
+        position: absolute; 
+        top:2.4%; 
+        left:1.2%; 
+        width: 100%;
+    }
+    .div4{
+        display: block;
+        height: 78px;
+    }
+    .div5{
+        display: block;
+        background-color: #dbb4b5;
+        height: 45px;
+        margin-left: 46px;
+        transform: skew(-33deg);
+    }
+    .divcha{
+        display: grid; 
+        height: 78px;
+        grid-template-columns: 15.5% 90% ;
+    }
+    .div6{
+        display: flex; 
+        background-color: #ad171c; 
+        height: 37px; margin-top: 0; 
+        border-top-left-radius: 3px; 
+        border-top-right-radius:3px;
+        margin-left: 1px;
+    }
+    .div7{
+        display: flex; 
+        background-color: #ad171c; 
+        height: 37px; margin-top: 0; 
+        margin-left: 13px;
+    }
+</style>
+<body class="body">
+    <div class="div1">
+        <div class = "div2">
+           <div class = "div3">
+                <img src = "file.png" width="23px" height="20px" style="margin-right: 2px;">
+                <text style="color: white; font-family: Arial, Helvetica, sans-serif;">Trang chủ</text>
+           </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 15.5% 90%; background-color: #fefefe;">
+            <div class="div4">
+                <img src="taixuong.png" height="80px" width="105%">
+            </div>
+            <div class="div5"></div>
+        </div>
+        <div style="display: grid; grid-template-columns: 82% 28%;">
+            <div class="div6">
+                <label style="color: white; font-family: Arial, Helvetica, sans-serif; margin-top: 10px; margin-left: 21px;">THÔNG BÁO</label>
+            </div>
+            <div class="div7">
+                <img src ="images-removebg-preview.png" alt = "." height="18px" style="margin-top: 10px; margin-left: 10px;">
+                <label style="color: white; font-family: Arial, Helvetica, sans-serif;margin-top: 10px; margin-left: 2px;">ĐĂNG NHẬP</label>
+            </div>
+        <div style="height: 420px; background-color: white; margin-top: auto; display: grid; grid-template-columns: 33% 67%;">
+            <div>
+                <img src="thongbao.png" alt="" width="98.5%" height="47%" style="margin-top: 5px; margin-left: 5px;">
+                <a href="#" style="text-decoration: none;">
+                    <div style="position: relative; float:right; font-size: 13px; text-align: right;line-height: 0px;font-family: Arial, Helvetica, sans-serif; color: black; margin-top: 15px; "><i>27/09/2024 17:43</i></div>
+                    <div style=" font-size: 16px; margin-left: 15px;margin-top: 25px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: black;line-height: 1.4; "><b>V/v: Điều chỉnh hình thức thực hiện các học phần thay thế tốt nghiệp cho sinh viên ngành Công nghệ Đa phương tiện khóa 2020 đại học hệ chính quy</b></div>
+                </a>
+            </div>
+        </div>
+        <div style="height: 220px; background-color: white; margin-left: 13px; margin-top: 0px;">
+            <form action="/login" method="post">
+                <div style="background-color: #dddddd; display: flex; width: 60%;border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
+                    <img src="360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv-removebg-preview.png" alt =" " width="15%" height="38px">
+                    <input name="username" type="text" style="width: 100%; height: 35px;  border-radius: 0px 5px 5px 0px; border: 0.2px solid #dddddd">
+                </div>
+                <div style="background-color: #dddddd; display: flex; width: 60%;border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
+                    <img src="khoa-ung-dung-removebg-preview.png" alt =" " width="15%" height="35px">
+                    <input name="password" type="password" style="width: 100%; height: 35px;  border-radius: 0px 5px 5px 0px; border: 0.2px solid #dddddd">
+                </div>
+                <div style="margin-right: 165px; float: right;  margin-top: 5px; margin-bottom: 4px;"><a href="#" style=" color: #ad171c; font-size: 16px;margin-top: 4px; font-family:Arial, Helvetica, sans-serif; text-decoration: none; "><i>Quên mật khẩu</i></a></div>
+                <% if(typeof (err) != "undefined") {%>
+                    <div style="background-color: rgb(234, 234, 169); margin-top: 24px; margin-left: 6px; margin-right: 6px; padding: 2px 2px; width: 100%; border-radius: 3px;">
+                        Đăng nhập không thành công. Vui lòng kiểm tra tên đăng nhập và mật khẩu.
+                    </div>
+                <% } %>
+                <button type="submit" style="width: 100%; padding: 0; border: 0; color: white; font-size: 16px; cursor: pointer;">
+                    <div style ="display: flex; justify-content: center; width: 60%;border-radius: 5px; height:18px; margin-top: 4px; margin-left: 5px; background-color: #ad171c; padding-top: 9px; padding-bottom: 9px;"><img src="log-removebg-preview.png" height="16px" width="16px">Đăng nhập</div>
+                </button>
+                <a href="#" style="color: white; font-size: 16px;margin-top: 4px; font-family:Arial, Helvetica, sans-serif; text-decoration: none;"><div style ="display: flex; justify-content: center; width: 60%;border-radius: 5px; height:auto; margin-top: 4px; margin-left: 5px; background-color: #0078D4; padding-top: 6px; padding-bottom: 10px; text-align: center; line-height: 1.4;">Đăng nhập với Microsoft office 365</div></a>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
