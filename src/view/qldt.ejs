@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <title>Cổng thông tin quản lý đào tạo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <style>
@@ -76,24 +78,23 @@
         margin-left: 13px;
     }
     .outer-container {
-        border: 1px solid black; /* Khung viền đen */
-        background-color: white; /* Nền trắng */
-        padding: 10px; /* Khoảng cách bên trong */
-        border-radius: 5px; /* Bo góc khung viền */
-        width: 300px; /* Đặt chiều rộng cố định */
-        margin: 0 auto; /* Căn giữa khung trong trang */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho khung */
+        border: 1px solid black; 
+        background-color: white; 
+        padding: 10px; 
+        border-radius: 5px; 
+        width: 300px; 
+        margin: 0 auto; 
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     }
     .notification {
-        margin: 5px 0; /* Khoảng cách giữa các thông báo */
+        margin: 5px 0; 
     }
     .red-dark-bold {
-        color: #AD171C;    /* Màu đỏ đậm */
-    font-weight: bold;  /* Nét đậm */
+        color: #AD171C;    
+    font-weight: bold;  
     font-size: 16px; 
     font-family: Arial, sans-serif;
     }
-
 
 
 </style>
@@ -252,7 +253,6 @@
             <br>
             <div style="background-color: white; border-radius: 5px; max-height: 500px; overflow-y: auto; margin: 0; padding: 0;">
                 <div style="height: 300px; display: grid; grid-template-columns: 100% 0%; height: 100%;">
-                    <!-- Thông báo 1 -->
                     <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: 100%;">
                         <div style="display: flex; align-items: center;">
                             <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
@@ -261,7 +261,6 @@
                         <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">27/09/2024 16:03</div>
                     </div>
                     <br>
-                    <!-- Thông báo 2 -->
                     <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: 100%;">
                         <div style="display: flex; align-items: center;">
                             <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
@@ -279,6 +278,71 @@
         
         
     </div>
+    <div class="table-primary w-100 py-1" style="background-color: #E8BEBF;">
+        <div class="container-fluid px-lg-5 pt-2">
+            <div class="row p-0">
+                <div class="col-12 col-md-12 col-sm-12" style="flex: 0 0 70%;">
+                </div>
+                <div class="col-12 col-md-12 col-sm-12" style="flex: 0 0 30%;">
+                    <div class="d-flex flex-column align-items-end py-1" style="margin-left: auto; margin-right: 10%;">
+                        <h6 style="font-weight: bold; font-size: 20px; margin-bottom: 10px; text-align: right;">THỐNG KÊ TRUY CẬP</h6>
+                        <div style="margin-bottom: 10px; text-align: right;">
+                            <p style="font-size: 18px; margin: 0; padding: 0;">
+                                <i class="fa fa-users text-primary pr-1"></i><i class="bi bi-people-fill" style="color: #AD171C;"></i>
+                                Đang truy cập:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="font-size: 18px; font-weight: normal;"> 208</span>
+                            </p>
+                        </div>
+                        <div style="margin-bottom: 10px; text-align: right;">
+                            <p style="font-size: 18px; margin: 0; padding: 0;">
+                                <i class="fa-solid fa-user-graduate text-primary pr-2"></i><i class="bi bi-person-fill" style="color: #AD171C;"></i>
+                                SV đang đăng nhập:&nbsp;&nbsp;&nbsp;
+                                <span style="font-size: 18px; font-weight: normal;"> 174</span>
+                            </p>
+                        </div>
+                        <div style="text-align: right;">
+                            <p style="font-size: 18px; margin: 0; padding: 0;">
+                                <i class="fa-solid fa-user-tie text-primary pr-2"></i><i class="bi bi-person-fill-dash" style="color: #AD171C; font-size: 24px;"></i>
+                                GV đang đăng nhập:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span style="font-size: 18px; font-weight: normal;"> 2</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <footer style="z-index: 0; background-color: #AD171C; padding: 10px 0; color: #fff; text-align: center;">
+        <div style="width: 100%; line-height: 1.5;">
+            <p style="margin: 0; padding: 0;">
+                <small>Copyright © 2020 Học viện Công nghệ Bưu chính Viễn thông</small>
+            </p>
+            <p style="margin: 0; padding: 0;">
+                <small>Version: BCVT-2024.09F.35</small>
+            </p>
+            <p style="margin: 0; padding: 0;">
+                <small>Design by</small>
+                <a href="https://aqtech.vn" style="color: #fff; text-decoration: none;">AQTECH.VN</a>
+            </p>
+        </div>
+    </footer>
+    
+    
 </div>
+
 </body>
 </html>
