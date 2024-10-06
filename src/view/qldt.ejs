@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "icon" type = "image/x-icon" href="favicon_io/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" href="https://edas.info/web/atc18/images/PTIT_logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
@@ -75,6 +75,27 @@
         height: 37px; margin-top: 0; 
         margin-left: 13px;
     }
+    .outer-container {
+        border: 1px solid black; /* Khung viền đen */
+        background-color: white; /* Nền trắng */
+        padding: 10px; /* Khoảng cách bên trong */
+        border-radius: 5px; /* Bo góc khung viền */
+        width: 300px; /* Đặt chiều rộng cố định */
+        margin: 0 auto; /* Căn giữa khung trong trang */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho khung */
+    }
+    .notification {
+        margin: 5px 0; /* Khoảng cách giữa các thông báo */
+    }
+    .red-dark-bold {
+        color: #AD171C;    /* Màu đỏ đậm */
+    font-weight: bold;  /* Nét đậm */
+    font-size: 16px; 
+    font-family: Arial, sans-serif;
+    }
+
+
+
 </style>
 <body class="body">
     <div class="div1">
@@ -90,23 +111,118 @@
             </div>
             <div class="div5"></div>
         </div>
-        <div style="display: grid; grid-template-columns: 82% 28%;">
-            <div class="div6">
+        <div style="display: grid; grid-template-columns: 82% 28%; gap: 1px;">
+            <div class="div6" style="margin: 0; padding: 0;">
                 <label style="color: white; font-family: Arial, Helvetica, sans-serif; margin-top: 10px; margin-left: 21px;">THÔNG BÁO</label>
             </div>
-            <div class="div7">
-                <img src ="images-removebg-preview.png" alt = "." height="18px" style="margin-top: 10px; margin-left: 10px;">
-                <label style="color: white; font-family: Arial, Helvetica, sans-serif;margin-top: 10px; margin-left: 2px;">ĐĂNG NHẬP</label>
+            <div class="div7" style="margin: 0; padding: 0;">
+                <img src="images-removebg-preview.png" alt="." height="18px" style="margin-top: 10px; margin-left: 10px;">
+                <label style="color: white; font-family: Arial, Helvetica, sans-serif; margin-top: 10px; margin-left: 2px;">ĐĂNG NHẬP</label>
             </div>
-        <div style="height: 420px; background-color: white; margin-top: auto; display: grid; grid-template-columns: 33% 67%;">
-            <div>
-                <img src="thongbao.png" alt="" width="98.5%" height="47%" style="margin-top: 5px; margin-left: 5px;">
-                <a href="#" style="text-decoration: none;">
-                    <div style="position: relative; float:right; font-size: 13px; text-align: right;line-height: 0px;font-family: Arial, Helvetica, sans-serif; color: black; margin-top: 15px; "><i>27/09/2024 17:43</i></div>
-                    <div style=" font-size: 16px; margin-left: 15px;margin-top: 25px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: black;line-height: 1.4; "><b>V/v: Điều chỉnh hình thức thực hiện các học phần thay thế tốt nghiệp cho sinh viên ngành Công nghệ Đa phương tiện khóa 2020 đại học hệ chính quy</b></div>
-                </a>
+        
+            <div style="background-color: white; padding: 20px; border-radius: 5px; max-height: 500px; overflow-y: auto; margin: 0; padding: 0;">
+                <div style="height: 300px; display: grid; grid-template-columns: 33% 67%; height: 100%;">
+                    <div style="height: 100%; margin-right: 10px;">
+                        <img src="thongbao.png" alt="" width="98.5%" height="47%" style="margin-top: 5px; margin-left: 5px;">
+                        <a href="#" style="text-decoration: none;">
+                            <div style="position: relative; float:right; font-size: 13px; text-align: right; line-height: 0px; font-family: Arial, Helvetica, sans-serif; color: black; margin-top: 5px;">
+                                <i>27/09/2024 17:43</i>
+                            </div>
+                            <div style="font-size: 16px; margin-left: 15px; margin-top: 10px; text-decoration: none; font-family: Arial, Helvetica, sans-serif; color: black; line-height: 1.4;">
+                                <b>V/v: Điều chỉnh hình thức thực hiện các học phần thay thế tốt nghiệp cho sinh viên ngành Công nghệ Đa phương tiện khóa 2020 đại học hệ chính quy</b>
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 20px; vertical-align: middle;margin-left: 5px;">
+                            </div>
+                        </a>
+                    </div>
+            
+                    <div class="custom-border" style="padding: 5px; border-left: 1px solid #ccc; border-bottom: 1px solid #ccc;">
+                        
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: fit-content;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                V/v: Tổ chức các lớp học lại, học cải thiện điểm theo lớp riêng - học kỳ 1, năm học 2024-2025 cho sinh viên các lớp Đại học chính quy
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">27/09/2024 16:03</div>
+                        </div>
+                        
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: fit-content;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                Thông báo V/v: Điều chỉnh hình thức thực hiện các học phần thay thế tốt nghiệp cho sinh viên khóa 2020 đại học hệ chính quy 
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">27/09/2024 16:03</div>
+                        </div>
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                THÔNG BÁO V/v: Đăng ký thực hiện khối kiến thức tốt nghiệp các ngành khối kỹ thuật khóa 2020
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap; margin-left: auto;">27/09/2024 16:03</div>
+                        </div>
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                Thông báo: V/v Ban hành Kế hoạch thi lần 2 học kỳ 2, học kỳ phụ năm học 2023-2024
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap; margin-left: auto;">01/05/2024 05:03</div>
+                        </div>
+                        
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                THÔNG BÁO V/v: Đăng ký thực hiện khối kiến thức tốt nghiệp các ngành khối kỹ thuật khóa 2020
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap; margin-left: auto;">23/09/2024 00:03</div>
+                        </div>
+                        
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                Thông báo: V/v Tổ chức đăng ký học ghép – học kỳ 1 năm học 2024-2025
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap; margin-left: auto;">11/12/2024 11:03</div>
+                        </div>
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                Thông báo: Mở hệ thống đăng ký môn học học kỳ 1 năm học 2024-2025
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap; margin-left: auto;">02/11/2024 16:03</div>
+                        </div>
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: fit-content;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                Thông báo: Mở hệ thống đăng ký môn học "Thực tập tốt nghiệp" cho sinh viên khóa 2020 ngành kỹ thuật
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">27/09/2024 16:03</div>
+                        </div>
+                        <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: fit-content;">
+                            <div style="display: flex; align-items: center;">
+                                <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                                Thông báo: V/v Đăng ký thời khóa biểu các lớp học phần trong đợt học kỳ phụ (kỳ hè) năm học 2023-2024
+                                <img src="https://qldt.ptit.edu.vn/assets/images/new-icon.gif" alt="Hình ảnh biểu tượng" style="width: 25px; height: 22px; vertical-align: middle; margin-left: 5px;">
+                            </div>
+                            <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">27/09/2024 16:03</div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
-        </div>
+            
+               
+                
+            
+            
+            
+            
         <div style="height: 220px; background-color: white; margin-left: 13px; margin-top: 0px;">
             <form action="/login" method="post">
                 <div style="background-color: #dddddd; display: flex; width: 60%;border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
@@ -129,6 +245,39 @@
                 <a href="#" style="color: white; font-size: 16px;margin-top: 4px; font-family:Arial, Helvetica, sans-serif; text-decoration: none;"><div style ="display: flex; justify-content: center; width: 60%;border-radius: 5px; height:auto; margin-top: 4px; margin-left: 5px; background-color: #0078D4; padding-top: 6px; padding-bottom: 10px; text-align: center; line-height: 1.4;">Đăng nhập với Microsoft office 365</div></a>
             </form>
         </div>
+        <div style="display: grid; grid-template-columns: 100% 0%; gap: 1px;">
+            <div class="div6" style="margin: 0; padding: 0;">
+                <label style="color: white; font-family: Arial, Helvetica, sans-serif; margin-top: 10px; margin-left: 21px;">HƯỚNG DẪN</label>
+            </div>
+            <br>
+            <div style="background-color: white; border-radius: 5px; max-height: 500px; overflow-y: auto; margin: 0; padding: 0;">
+                <div style="height: 300px; display: grid; grid-template-columns: 100% 0%; height: 100%;">
+                    <!-- Thông báo 1 -->
+                    <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: 100%;">
+                        <div style="display: flex; align-items: center;">
+                            <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                            Hướng dẫn sử dụng cổng thông tin điện tử quản lý đào tạo cho giảng viên và cố vấn học tập
+                        </div>
+                        <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">27/09/2024 16:03</div>
+                    </div>
+                    <br>
+                    <!-- Thông báo 2 -->
+                    <div class="notification" style="padding: 2px; display: flex; justify-content: space-between; border-bottom: 1px solid #ccc; width: 100%;">
+                        <div style="display: flex; align-items: center;">
+                            <span class="red-dark-bold" style="color: #AD171C; font-weight: bold; font-size: 20px;">>></span>
+                            Hướng dẫn sử dụng cổng thông tin điện tử quản lý đào tạo cho sinh viên
+                        </div>
+                        <div style="font-size: 14px; color: gray; font-style: italic; white-space: nowrap;">01/07/2023 00:00</div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        
+        
+        
     </div>
 </div>
 </body>
