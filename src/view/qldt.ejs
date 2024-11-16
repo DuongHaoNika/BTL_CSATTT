@@ -224,28 +224,57 @@
             
             
             
-        <div style="height: 220px; background-color: white; margin-left: 13px; margin-top: 0px;">
-            <form action="/login" method="post">
-                <div style="background-color: #dddddd; display: flex; width: 60%;border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
-                    <img src="360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv-removebg-preview.png" alt =" " width="15%" height="38px">
-                    <input name="username" type="text" style="width: 100%; height: 35px;  border-radius: 0px 5px 5px 0px; border: 0.2px solid #dddddd">
-                </div>
-                <div style="background-color: #dddddd; display: flex; width: 60%;border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
-                    <img src="khoa-ung-dung-removebg-preview.png" alt =" " width="15%" height="35px">
-                    <input name="password" type="password" style="width: 100%; height: 35px;  border-radius: 0px 5px 5px 0px; border: 0.2px solid #dddddd">
-                </div>
-                <div style="margin-right: 165px; float: right;  margin-top: 5px; margin-bottom: 4px;"><a href="#" style=" color: #ad171c; font-size: 16px;margin-top: 4px; font-family:Arial, Helvetica, sans-serif; text-decoration: none; "><i>Quên mật khẩu</i></a></div>
-                <% if(typeof (err) != "undefined") {%>
-                    <div style="background-color: rgb(234, 234, 169); margin-top: 24px; margin-left: 6px; margin-right: 6px; padding: 2px 2px; width: 100%; border-radius: 3px;">
-                        Đăng nhập không thành công. Vui lòng kiểm tra tên đăng nhập và mật khẩu.
+            <div style="height: 220px; background-color: white; margin-left: 13px; margin-top: 0px;">
+                <form action="/login" method="post">
+                    <!-- Username -->
+                    <div style="background-color: #dddddd; display: flex; width: 60%; border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
+                        <img src="360_F_65772719_A1UV5kLi5nCEWI0BNLLiFaBPEkUbv5Fv-removebg-preview.png" alt=" " width="15%" height="38px">
+                        <input name="username" type="text" placeholder="Tên đăng nhập" required style="width: 100%; height: 35px; border-radius: 0px 5px 5px 0px; border: 0.2px solid #dddddd">
                     </div>
-                <% } %>
-                <button type="submit" style="width: 100%; padding: 0; border: 0; color: white; font-size: 16px; cursor: pointer;">
-                    <div style ="display: flex; justify-content: center; width: 60%;border-radius: 5px; height:18px; margin-top: 4px; margin-left: 5px; background-color: #ad171c; padding-top: 9px; padding-bottom: 9px;"><img src="log-removebg-preview.png" height="16px" width="16px">Đăng nhập</div>
-                </button>
-                <a href="#" style="color: white; font-size: 16px;margin-top: 4px; font-family:Arial, Helvetica, sans-serif; text-decoration: none;"><div style ="display: flex; justify-content: center; width: 60%;border-radius: 5px; height:auto; margin-top: 4px; margin-left: 5px; background-color: #0078D4; padding-top: 6px; padding-bottom: 10px; text-align: center; line-height: 1.4;">Đăng nhập với Microsoft office 365</div></a>
-            </form>
-        </div>
+                    <!-- Password -->
+                    <div style="background-color: #dddddd; display: flex; width: 60%; border-radius: 5px; height: fit-content; margin-top: 4px; margin-left: 5px;">
+                        <img src="khoa-ung-dung-removebg-preview.png" alt=" " width="15%" height="35px">
+                        <input name="password" type="password" placeholder="Mật khẩu" required style="width: 100%; height: 35px; border-radius: 0px 5px 5px 0px; border: 0.2px solid #dddddd">
+                    </div>
+                    <!-- Forgot Password -->
+                    <div style="margin-right: 165px; float: right; margin-top: 5px; margin-bottom: 4px;">
+                        <a href="#" style="color: #ad171c; font-size: 16px; margin-top: 4px; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">
+                            <i>Quên mật khẩu</i>
+                        </a>
+                    </div>
+                    <!-- Error message -->
+                    <% if (typeof err !== "undefined") { %>
+                        <div style="background-color: rgb(234, 234, 169); margin-top: 24px; margin-left: 6px; margin-right: 6px; padding: 2px 2px; width: 100%; border-radius: 3px;">
+                            <%= err %>
+                        </div>
+                    <% } %>
+                    <% if (typeof error1 !== "undefined") { %>
+                        <div style="background-color: rgb(234, 234, 169); margin-top: 24px; margin-left: 6px; margin-right: 6px; padding: 2px 2px; width: 100%; border-radius: 3px;">
+                            <%= error1.msg %>
+                        </div>
+                    <% } %>
+                    <% if (typeof error2 !== "undefined") { %>
+                        <div style="background-color: rgb(234, 234, 169); margin-top: 24px; margin-left: 6px; margin-right: 6px; padding: 2px 2px; width: 100%; border-radius: 3px;">
+                            <%= error2.msg %>
+                        </div>
+                    <% } %>
+
+                    
+                    <!-- Submit button -->
+                    <button type="submit" style="width: 100%; padding: 0; border: 0; color: white; font-size: 16px; cursor: pointer;">
+                        <div style="display: flex; justify-content: center; width: 60%; border-radius: 5px; height: 18px; margin-top: 4px; margin-left: 5px; background-color: #ad171c; padding-top: 9px; padding-bottom: 9px;">
+                            <img src="log-removebg-preview.png" height="16px" width="16px"> Đăng nhập
+                        </div>
+                    </button>
+                    <!-- Login with Microsoft -->
+                    <a href="#" style="color: white; font-size: 16px; margin-top: 4px; font-family: Arial, Helvetica, sans-serif; text-decoration: none;">
+                        <div style="display: flex; justify-content: center; width: 60%; border-radius: 5px; height: auto; margin-top: 4px; margin-left: 5px; background-color: #0078D4; padding-top: 6px; padding-bottom: 10px; text-align: center; line-height: 1.4;">
+                            Đăng nhập với Microsoft office 365
+                        </div>
+                    </a>
+                </form>
+            </div>
+            
         <div style="display: grid; grid-template-columns: 100% 0%; gap: 1px;">
             <div class="div6" style="margin: 0; padding: 0;">
                 <label style="color: white; font-family: Arial, Helvetica, sans-serif; margin-top: 10px; margin-left: 21px;">HƯỚNG DẪN</label>
