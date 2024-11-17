@@ -3,7 +3,7 @@ const indexController = require('../controllers/index')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    res.render('index')
+    res.render('qldt')
 })
 
 router.post("/login", indexController.login)
