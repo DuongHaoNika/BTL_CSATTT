@@ -38,8 +38,8 @@ const login = [
                 return res.render('qldt', { err: "Mật khẩu không chính xác" });
             }
         }
-        catch(err){
-            conole.log(err)
+        catch(err) {
+            console.log(err)
             return res.render('qldt', { err: "Mật khẩu không chính xác" });
         }
     }
