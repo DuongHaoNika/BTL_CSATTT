@@ -39,6 +39,7 @@ const login = [
             }
         }
         catch(err){
+            conole.log(err)
             return res.render('qldt', { err: "Mật khẩu không chính xác" });
         }
     }
