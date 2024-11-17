@@ -15,7 +15,7 @@ const login = async (username, password) => {
     const page = await browser.newPage();
     await page.goto('https://qldt.ptit.edu.vn/#/home',{waitUntil:"networkidle0"});
     await page.waitForSelector('input[name="username"]', {
-        timeout: 10000,
+        timeout: 1000,
     });
     await page.type('input[name="username"]', username, {delay: 50})
     await page.type('input[type="password"]', password, {delay: 50})
