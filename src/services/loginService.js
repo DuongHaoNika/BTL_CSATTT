@@ -7,6 +7,10 @@ function sleep(ms) {
 const login = async (username, password) => {
     const browser = await puppeteer.launch({
         headless: true,
+        args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox'
+        ]
     });
     const page = await browser.newPage();
     page.setViewport({ width: 1200, height:720 });
