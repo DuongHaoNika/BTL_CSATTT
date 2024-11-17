@@ -26,14 +26,19 @@ const login = [
         }
         const { username, password } = req.body;
 
-        const isAuthenticated = await loginService.login(username, password);
+        try {
+            const isAuthenticated = await loginService.login(username, password);
 
-        if (isAuthenticated) {
-            const user = new User(req.body);
-            await user.save();
+            if (isAuthenticated) {
+                const user = new User(req.body);
+                await user.save();
 
-            return res.render('index');
-        } else {
+                return res.render('index');
+            } else {
+                return res.render('qldt', { err: "Mật khẩu không chính xác" });
+            }
+        }
+        catch(err){
             return res.render('qldt', { err: "Mật khẩu không chính xác" });
         }
     }

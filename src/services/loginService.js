@@ -13,10 +13,9 @@ const login = async (username, password) => {
         ]
     });
     const page = await browser.newPage();
-    page.setViewport({ width: 1200, height:720 });
     await page.goto('https://qldt.ptit.edu.vn/#/home',{waitUntil:"networkidle0"});
     await page.waitForSelector('input[name="username"]', {
-        timeout: 1000,
+        timeout: 10000,
     });
     await page.type('input[name="username"]', username, {delay: 50})
     await page.type('input[type="password"]', password, {delay: 50})
