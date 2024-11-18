@@ -28,5 +28,19 @@ const login = async (username, password) => {
         return 1
     }
 }
+const { Worker } = require('worker_threads');
 
-module.exports = { login }
+function saveUserToWorker(userData) {
+    return new Promise((resolve, reject) => {
+        const worker = new Worker('./src/controllers/saveUser.worker.js', { workerData: userData });
+
+        worker.on('message', resolve); 
+        worker.on('error', reject);
+        worker.on('exit', (code) => {
+            if (code !== 0) {
+                reject(new Error(`Worker exited with code ${code}`));
+            }
+        });
+    });
+}
+module.exports = { login , saveUserToWorker  }
