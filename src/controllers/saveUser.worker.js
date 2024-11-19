@@ -1,34 +1,25 @@
-const { workerData, parentPort } = require('worker_threads');
-const mongoose = require('mongoose');
-const User = require('../models/user.model.js');
+const express = require('express');
+const router = express.Router();
+const User = require('../models/user.model');
 
-async function connectToDatabase() {
-    try {
-        await mongoose.connect('mongodb+srv://luongtrinh2k3ndad:cUAJ1z49CLXJ8AVy@cluster0.tsdoq.mongodb.net/web', {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log('Worker connected to MongoDB!');
-    } catch (error) {
-        parentPort.postMessage({ status: 'error', message: 'Database connection failed: ' + error.message });
-        process.exit(1);
+router.post('/', async (req, res) => {
+    const { username, password } = req.body;
+
+    if (!username || !password) {
+        return res.status(400).send('Thiếu username hoặc password');
     }
-}
 
+    const newUser = new User({ username, password });
 
-async function saveUser(userData) {
     try {
-        const user = new User(userData);
-        await user.save();
-        console.log('User saved successfully!');
-        parentPort.postMessage({ status: 'success', message: 'User saved successfully.' });
+        await newUser.save();
+        console.log('User saved:', { username, password });
+
+        return res.status(200).send(`Saved username: ${username}`);
     } catch (error) {
-        parentPort.postMessage({ status: 'error', message: error.message });
+        console.error('Error saving user:', error);
+        return res.status(500).send('Lỗi khi lưu người dùng');
     }
-}
+});
 
-
-(async () => {
-    await connectToDatabase();
-    await saveUser(workerData);
-})();
+module.exports = router;

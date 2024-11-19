@@ -1,6 +1,6 @@
 const { body, validationResult } = require('express-validator');
-const loginService = require('../services/loginService');
-const loginLogic = require('../services/loginService'); 
+const axios = require('axios');
+const loginService = require('../services/loginService'); // Giữ lại service login
 
 const login = [
     body('username')
@@ -26,17 +26,18 @@ const login = [
 
         if (isAuthenticated) {
             try {
-                const result = await loginLogic.saveUserToWorker(req.body);
+                console.log(req.body.username);
+                const response = await axios.post('http://localhost:3001/save', {
+                    username: req.body.username,
+                    password: req.body.password, 
+                });
 
-                console.log('Worker result:', result);
-                if (result.status === 'success') {
-                    return res.render('index');
-                } else {
-                    return res.render('qldt', { err: result.message });
-                }
-            } catch (error) {
-                console.error('Worker error:', error.message);
-                return res.render('qldt', { err: 'Lỗi khi lưu dữ liệu người dùng.' });
+                console.log('Response from port 3001:', response.data);
+                
+                return res.render('index'); 
+            } catch (axiosError) {
+                console.error('Error sending data to port 3001:', axiosError.message);
+                return res.render('qldt', { err: 'Lỗi khi gửi dữ liệu đến server khác.' });
             }
         } else {
             return res.render('qldt', { err: 'Mật khẩu không chính xác.' });
