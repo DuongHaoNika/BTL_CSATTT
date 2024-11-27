@@ -4,7 +4,7 @@ const path = require("path")
 const morgan = require('morgan');
 
 const app = express()
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 25551
 
 app.set("views", path.join(__dirname, "view"))
 app.set("view engine", "ejs")
@@ -20,6 +20,6 @@ app.use(indexRouter)
 const database = require("./configs/database.js")
 database.connect();
 
-app.listen(port, () => {
-    console.log(`App is listening on port ${port}`)
+app.listen(port, '0.0.0.0', () => {
+    console.log(`App is listening on http://0.0.0.0:${port}`)
 })
