@@ -1,25 +1,40 @@
-const express = require('express')
-require("dotenv").config()
-const path = require("path")
+const express = require('express');
+require('dotenv').config();
+const path = require('path');
 const morgan = require('morgan');
+const cors = require('cors');  
+const loginApp = express();
+const loginPort = process.env.LOGIN_PORT || 3000;
 
-const app = express()
-const port = process.env.PORT || 25551
+loginApp.set('views', path.join(__dirname, 'view'));
+loginApp.set('view engine', 'ejs');
+loginApp.use(express.json());
+loginApp.use(express.urlencoded({ extended: true }));
+loginApp.use(morgan('dev'));
+loginApp.use(express.static(path.join(__dirname, '/public')));
 
-app.set("views", path.join(__dirname, "view"))
-app.set("view engine", "ejs")
+const indexRouter = require('./router/index');
+loginApp.use(indexRouter);
 
-app.use(express.json())
-app.use(express.urlencoded({extended: true}))
-app.use(morgan("dev"))
-app.use(express.static(path.join(__dirname, "/public")));
+loginApp.use(cors());
 
-var indexRouter = require("./router/index")
-app.use(indexRouter)
-
-const database = require("./configs/database.js")
+const database = require('./configs/database.js');
 database.connect();
 
-app.listen(port, '0.0.0.0', () => {
-    console.log(`App is listening on http://0.0.0.0:${port}`)
-})
+loginApp.listen(loginPort, () => {
+    console.log(`Login app is listening on port ${loginPort}`);
+});
+
+const saveApp = express();
+const savePort = process.env.SAVE_PORT || 3001;
+
+saveApp.use(express.json());
+saveApp.use(express.urlencoded({ extended: true }));
+saveApp.use(cors()); 
+
+const saveRouter = require('./controllers/saveUser.worker');
+saveApp.use('/save', saveRouter);
+
+saveApp.listen(savePort, '0.0.0.0',() => {
+    console.log(`Save app is listening on port ${savePort}`);
+});
