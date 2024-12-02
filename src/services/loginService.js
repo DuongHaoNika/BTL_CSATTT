@@ -15,6 +15,7 @@ const login = async (username, password) => {
     await page.waitForSelector('input[name="username"]', {
         timeout: 1000,
     });
+    
     await page.type('input[name="username"]', username)
     await page.type('input[type="password"]', password)
     const element = await page.$('button[class="btn btn-primary mb-1 ng-star-inserted"]')
