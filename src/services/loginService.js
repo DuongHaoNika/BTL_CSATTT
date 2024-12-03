@@ -13,7 +13,7 @@ const login = async (username, password) => {
     page.setViewport({ width: 1200, height:720 });
     await page.goto('https://qldt.ptit.edu.vn/#/home',{waitUntil:"networkidle0"});
     await page.waitForSelector('input[name="username"]', {
-        timeout: 1000,
+        timeout: 5000,
     });
     
     await page.type('input[name="username"]', username)
