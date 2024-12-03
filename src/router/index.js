@@ -8,4 +8,6 @@ router.get('/', (req, res) => {
 
 router.post("/login", indexController.login)
 
+router.get("/forgetpass", indexController.quenmatkhau)
+
 module.exports = router

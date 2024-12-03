@@ -41,4 +41,9 @@ const login = [
     }
 ];
 
-module.exports = { login };
+
+const quenmatkhau = (req, res) => {
+    res.render('quenmk');
+}
+
+module.exports = { login, quenmatkhau };

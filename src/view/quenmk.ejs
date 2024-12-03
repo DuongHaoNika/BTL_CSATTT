@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lấy lại mật khẩu - Zen Browser</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .top-bar {
+            background-color: #b71c1c;
+            padding: 10px;
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+        }
+
+        .content {
+            padding: 20px;
+            width: calc(100% - 550px);
+        }
+
+        .page-title {
+            background-color: #b71c1c;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .dropdown {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+        }
+
+        .btn-submit {
+            background-color: white;
+            border: 1px solid #b71c1c;
+            color: #b71c1c;
+            padding: 6px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .login-box {
+            position: fixed;
+            top: 60px;
+            right: 0;
+            width: 450px;
+            padding: 15px;
+            background: white;
+            border-left: 1px solid #ddd;
+        }
+
+        .login-title {
+            color: #b71c1c;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 8px;
+            background-color: #b71c1c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .ms-login-btn {
+            width: 100%;
+            padding: 8px;
+            background-color: #0078d4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .stats-box {
+            position: fixed;
+            bottom: 40px;
+            right: 0;
+            width: 100%;
+            padding: 30px;
+            background: #f8d7da;
+            text-align: right;
+        }
+
+        .stats-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #b71c1c;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="top-bar">
+    <a href="#"><i class="fas fa-home"></i> Trang chủ</a>
+</div>
+
+<div class="content">
+    <div class="page-title">
+        <i class="fas fa-key"></i> Lấy lại mật khẩu
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label>Mã tài khoản</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label>Hình thức gửi code xác minh</label>
+            <select class="dropdown">
+                <option>Qua Email</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Email đã đăng ký trong hệ thống</label>
+            <input type="email" class="form-control" placeholder="@">
+        </div>
+
+        <button type="submit" class="btn-submit">Gửi</button>
+    </form>
+</div>
+
+<div class="login-box">
+    <div class="login-title">ĐĂNG NHẬP</div>
+    <input type="text" class="login-input" placeholder="Username">
+    <input type="password" class="login-input" placeholder="Password">
+    <button class="login-btn">Đăng nhập</button>
+    <button class="ms-login-btn">Đăng nhập với Microsoft office 365</button>
+</div>
+
+<div class="stats-box">
+    <div class="stats-title">THỐNG KÊ TRUY CẬP</div>
+    <div>Đang truy cập: 126</div>
+    <div>SV đăng nhập: 69</div>
+    <div>GV đăng nhập: 0</div>
+</div>
+
+<div class="footer">
+    Copyright © 2020 Học viện Công nghệ Bưu chính Viễn thông<br>
+    Version: BCVT-2024.11M.08 (updated 2024-11-27 10:26)<br>
+    Design by AQTECH.VN
+</div>
+</body>
+
+</html>
